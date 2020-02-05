@@ -2,9 +2,8 @@
 title: "Homework1"
 author: "Bernardo Magalhaes, Adhish Liutel, Ji Heon Shim"
 date: "2/5/2020"
-output: 
-  html_document:
-    keep_md: true
+output: html_document
+
 ---
 
 ```{r setup, include=FALSE}
