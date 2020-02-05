@@ -54,5 +54,3 @@ ggplot(mean.ABIA2_fly, aes(reorder(UniqueCarrier, -DepDelay, sum), DepDelay))+ge
 
 ```
 
-!(Rplot.png)(https://github.com/jiehonshim/hw1/blob/master/Rplot.png?raw=true)
-This result tells us..
