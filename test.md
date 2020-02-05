@@ -32,3 +32,5 @@ Q1. Which Airplane company makes most delays?
     ## YV 11.579890            YV
 
 ![](test_files/figure-markdown_github/1.1.-3.png)
+
+whatever

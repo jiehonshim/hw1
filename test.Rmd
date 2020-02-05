@@ -1,6 +1,6 @@
 ---
-title: 'homework1'
-author: 'Bernardo Magalhaes, Adhish Luitel, Ji Heon Shim'
+title: "homework1"
+author: "Bernardo Magalhaes, Adhish Luitel, Ji Heon Shim"
 date: "`r format(Sys.Date())`" 
 output:
   md_document:
@@ -49,6 +49,12 @@ mean.ABIA2_fly$UniqueCarrier<-rownames(mean.ABIA2_fly)
 names(mean.ABIA2_fly)<-c("DepDelay","UniqueCarrier")
 mean.ABIA2_fly
 ggplot(mean.ABIA2_fly, aes(reorder(UniqueCarrier, -DepDelay, sum), DepDelay))+geom_bar(stat="identity")
+
+```
+
+whatever
+
+```{r 1.1.2 }
 
 ```
 
