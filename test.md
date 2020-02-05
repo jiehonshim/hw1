@@ -33,4 +33,5 @@ Q1. Which Airplane company makes most delays?
 
 ![](test_files/figure-markdown_github/1.1.-3.png)
 
+!(Rplot.png)(<a href="https://github.com/jiehonshim/hw1/blob/master/Rplot.png?raw=true" class="uri">https://github.com/jiehonshim/hw1/blob/master/Rplot.png?raw=true</a>)
 This result tells us..

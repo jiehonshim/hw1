@@ -1,0 +1,58 @@
+---
+title: "homework1"
+author: "Bernardo Magalhaes, Adhish Luitel, Ji Heon Shim"
+date: "`r format(Sys.Date())`" 
+output:
+  md_document:
+    variant: markdown_github
+editor_options: 
+  chunk_output_type: inline
+---
+
+```{r setting up, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)  
+library(tidyverse)
+library(mosaic)
+```
+
+
+# Exercise 1.1
+What we are trying to do.
+
+## Cleaning data
+The reason we got rid of cancelled or diverted flight from data.
+
+
+```{r cleaning data, echo=FALSE}
+urlfile<-'https://raw.githubusercontent.com/jiehonshim/hw1/master/ABIA.csv'
+ABIA<-read.csv(url(urlfile))
+ABIA2 = ABIA
+ABIA2_fly <- subset(ABIA2,(ABIA2$Cancelled == "0"))
+ABIA2_fly <- subset(ABIA2_fly,!(ABIA2_fly$Diverted == 1))
+ABIA2$INorOUT[ABIA2$Dest == "AUS"] = "Arrival"
+ABIA2$INorOUT[ABIA2$Origin == "AUS"] = "Departure"
+```
+
+## Q1. Which Airplane company makes most delays?
+
+
+
+```{r 1.1., echo=FALSE}
+#Q4. Which airplane company makes delays most often?
+#Delays by Aircraft companies 
+
+bwplot(DepDelay~UniqueCarrier, data=ABIA2_fly)
+p6= bwplot(DepDelay~UniqueCarrier, data=ABIA2_fly, ylim=c(-20,30))
+p6
+# seems like EV is the worst
+
+mean.ABIA2_fly<-as.data.frame(tapply(ABIA2_fly$DepDelay, ABIA2_fly$UniqueCarrier, mean))
+mean.ABIA2_fly$UniqueCarrier<-rownames(mean.ABIA2_fly)
+names(mean.ABIA2_fly)<-c("DepDelay","UniqueCarrier")
+mean.ABIA2_fly
+ggplot(mean.ABIA2_fly, aes(reorder(UniqueCarrier, -DepDelay, sum), DepDelay))+geom_bar(stat="identity")
+
+```
+
+!(Rplot.png)(https://github.com/jiehonshim/hw1/blob/master/Rplot.png?raw=true)
+This result tells us..
