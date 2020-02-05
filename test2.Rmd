@@ -2,9 +2,9 @@
 title: "Homework1"
 author: "Bernardo Magalhaes, Adhish Liutel, Ji Heon Shim"
 date: "2/5/2020"
-output:
-  md_document:
-    variant: markdown_github
+output: 
+  html_document:
+    keep_md: true
 ---
 
 ```{r setup, include=FALSE}
