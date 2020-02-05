@@ -1,12 +1,10 @@
 ---
-title: "homework1"
-author: "Bernardo Magalhaes, Adhish Luitel, Ji Heon Shim"
+title: 'homework1'
+author: 'Bernardo Magalhaes, Adhish Luitel, Ji Heon Shim'
 date: "`r format(Sys.Date())`" 
 output:
   md_document:
     variant: markdown_github
-editor_options: 
-  chunk_output_type: inline
 ---
 
 ```{r setting up, include=FALSE}
